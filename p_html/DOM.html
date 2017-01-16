@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM改变html</title>
+</head>
+
+
+<body>
+<h1 onclick="this.innerHTML='DOM改变html'"> 你好，请学习</h1>
+<h2 onclick="chan(this)">和</h2>
+<p id="p1" style="font-size: large"  onclick="chan(this)"> 回归</p>
+<p id="p2">关乎 </p>
+<div></div>
+<img id="image" src="images/项目属性.png ">
+<div>改变 HTML 输出流<br>
+    JavaScript 能够创建动态的 HTML 内容：<br>
+    今天的日期是： Sat Jan 14 2017 18:01:47 GMT+0800 (中国标准时间)<br>
+    在 JavaScript 中，document.write() 可用于直接向 HTML 输出流写内容。
+</div>
+<p></p>
+<button type="button" onclick="chan(this)">你好哈</button>
+<button type="button"  style="color:palevioletred;font-size: x-large;" onclick="document.getElementById(
+'p1').style.color='red'">点击</button>
+<input type="button" value="隐藏文本" onclick="document.getElementById('p1').style.visibility='hidden'">
+<input type="button" value="显示文本" onclick="document.getElementById('p1').style.visibility='visible'">
+<p id="p3"></p>
+<input id="t1"   type="text" onchange="onchan()"></input>
+
+
+<script>
+    document.write(Date());
+    document.getElementById("image").src = "images/1.jpg";
+    document.getElementById("p1").style.background = "green";
+    document.getElementById("p2").style.fontFamily = "Arial";
+    document.getElementById("p2").style.color = " pink";
+    document.getElementById("p2").style.fontSize = "larger";
+    function chan(id){
+        id.innerHTML="谢谢！"
+    }
+function onchan() {
+        var x=document.getElementById("t1");
+        x.value=x.value.toUpperCase();
+
+}
+function onchan1(id) {
+        
+
+
+}
+
+</script>
+</body>
+</html>
