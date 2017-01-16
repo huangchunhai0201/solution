@@ -1,0 +1,7 @@
+安装node环境 官网下载安装
+
+按照express中的安装从头安装
+一步都不能少 （不要再git命令中安装 在cmd中安装）     另外cnpm要找原来的实现
+
+mysql安装（文档要准备 都安装了几次了） （直接安装phpstudy 集成环境）
+mysql + navicat
