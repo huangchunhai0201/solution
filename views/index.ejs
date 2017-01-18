@@ -3,9 +3,18 @@
 <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/lib/jquery/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#button0').click(function() {
+                alert(1);
+            });
+        });
+    </script>
 </head>
 <body>
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
+<div id="button0">
+    button0
+</div>
 </body>
 </html>
