@@ -10,7 +10,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   //数据
   var data = {
-    title: '国内要闻1',
+    title: '国内要闻',
     time: (new Date).toString(),
     list: [
       {

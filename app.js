@@ -17,11 +17,12 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 // app.set('view engine', 'ejs');
+app.engine('.html',require('ejs').__express);
 
 
-template.config('base','');
-template.config('extname','.html');
-app.engine('.html',template.__express);
+// template.config('base','');
+// template.config('extname','.html');
+// app.engine('.html',template.__express);
 app.set('view engine','html');
 
 
