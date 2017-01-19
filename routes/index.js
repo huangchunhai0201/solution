@@ -19,7 +19,7 @@ router.get('/test', function(req, res, next) {
       /*渲染模板*/
       data.title = 'test';
       console.log(data.result);
-      res.render('test', data);
+      res.render('test/test', data);
     }
   });
 });
@@ -27,7 +27,7 @@ router.get('/test', function(req, res, next) {
 router.get('/', function(req, res, next) {
   //数据
   var data = {
-    title: '国内要闻',
+    title: '首页',
     time: (new Date).toString(),
     list: [
       {
@@ -41,7 +41,7 @@ router.get('/', function(req, res, next) {
     ]
   };
   //渲染模板
-  res.render('index', data);
+  res.render('index/index', data);
 });
 
 

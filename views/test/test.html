@@ -1,13 +1,13 @@
-<%include header.ejs %>
+<%include ../common/header.ejs %>
 <body>
 <div id="testHtml"></div>
 <%=result.roadLevel %>
 <script>
-    var user = JSON.parse('<%- JSON.stringify(result)%>')[2];
+    var user = JSON.parse('<%- JSON.stringify(result)%>')[1];
     var html = juicer('<div>姓名：${name}</div>', user);
     html += '<br/><p style="color: red;">测试后台模版和前台模版和调用java接口</p>';
     $('#testHtml').html(html);
 </script>
 </body>
 
-<%include footer.ejs %>
+<%include ../common/footer.ejs %>
