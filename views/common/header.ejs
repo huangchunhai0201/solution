@@ -7,34 +7,59 @@
     <script src="/lib/jquery/jquery-1.10.2.js"></script>
     <script src="/lib/juicer/juicer-min.js"></script>
 
-    <script src="/js/pithy.js"></script>
-    <script src="/js/p_Countdown.js"></script>
+    <script src="/js/Pithy.js"></script>
+    <script src="/js/p_Badge.js"></script>
+    <script src="/js/p_Modal.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
+            var p_Badge_info = {
+                label: '通知',
+                count: 8
+            };
+            var p_Badge = new Pithy.p_Badge(p_Badge_info);
+            p_Badge.build('#header .top-right .li1');
 
+            var p_Modal_info = {};
+            var p_Modal = new Pithy.p_Modal(p_Modal_info);
+            p_Modal.build(".sys_modal");
         });
     </script>
 </head>
 <body>
 <div id="header">
+    <div class="sys_modal"></div>
     <div class="top">
         <div class="top-left">
             SYSTEM
         </div>
         <ul class="top-right">
-            <li class="li1">通知<span>32</span></li>
+            <li class="li1"><span></span></li>
             <li class="li2">秦始皇</li>
             <li class="li3">
                 <i class="icon anticon icon-poweroff"></i>
             </li>
         </ul>
     </div>
-    <ul>
-        <li>首页</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+    <ul class="header-menu">
+        <li>
+            <div><a style="font-size: 13px;color: #333333;" href="/">开发1</a></div>
+            <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+        </li>
+        <li>
+            <div><a style="font-size: 13px;color: #333333;" href="/other/index">开发2</a></div>
+            <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+        </li>
+        <li>
+            <div><a style="font-size: 13px;color: #333333;" href="">开发3</a></div>
+            <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+        </li>
+        <li>
+            <div><a style="font-size: 13px;color: #333333;" href="">开发4</a></div>
+            <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+        </li>
+        <li>
+            <div><a style="font-size: 13px;color: #333333;" href="">开发5</a></div>
+        </li>
     </ul>
 </div>
