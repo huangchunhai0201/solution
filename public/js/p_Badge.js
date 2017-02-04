@@ -46,10 +46,9 @@
             var p_modal = new Pithy.p_Modal({
                 'title': '消息列表',
                 'style': {
-                    'width': '40%',
-                    'height': '60vh'
+                    'width': '40%'
                 },
-                'content': '<p style="padding-left: 12px;">系统开发中。。。</p>'
+                'content': '<p style="padding-left: 12px;">消息中心开发中。。。</p>'
             });
             p_modal.build('body');
             this._jControl.on('click', function () {

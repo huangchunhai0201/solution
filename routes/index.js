@@ -27,7 +27,7 @@ router.get('/test', function(req, res, next) {
 router.get('/', function(req, res, next) {
   //数据
   var data = {
-    title: '开发1',
+    title: 'Map',
     time: (new Date).toString(),
     list: [
       {
@@ -42,6 +42,26 @@ router.get('/', function(req, res, next) {
   };
   //渲染模板
   res.render('index/index', data);
+});
+
+router.get('/index/map', function(req, res, next) {
+  //数据
+  var data = {
+    title: 'Map',
+    time: (new Date).toString(),
+    list: [
+      {
+        id: '1',
+        name: '张三'
+      },
+      {
+        id: '2',
+        name: '李四'
+      }
+    ]
+  };
+  //渲染模板
+  res.render('index/map', data);
 });
 
 router.get('/other/index', function(req, res, next) {

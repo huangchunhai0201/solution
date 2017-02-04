@@ -6,10 +6,12 @@
     <link rel='stylesheet' href='/css/common.css'/>
     <script src="/lib/jquery/jquery-1.10.2.js"></script>
     <script src="/lib/juicer/juicer-min.js"></script>
-
+    <script src="http://webapi.amap.com/maps?v=1.3&key=69907078db273342844c92310bead8a0"></script>
     <script src="/js/Pithy.js"></script>
+    <script src="/js/p_Map.js"></script>
     <script src="/js/p_Badge.js"></script>
     <script src="/js/p_Modal.js"></script>
+    <script src="/js/p_Menu.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -23,6 +25,11 @@
             var p_Modal_info = {};
             var p_Modal = new Pithy.p_Modal(p_Modal_info);
             p_Modal.build(".sys_modal");
+
+            //
+            var height = $(document).height();
+            $('.main').height(height - 126);
+            //
         });
     </script>
 </head>
@@ -43,23 +50,47 @@
     </div>
     <ul class="header-menu">
         <li>
-            <div><a style="font-size: 13px;color: #333333;" href="/">开发1</a></div>
-            <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+            <a style="font-size: 13px;color: #333333;" href="/">
+                <div>
+                    <i class="icon anticon icon-enviromento"></i>
+                </div>
+                <div class="header-menu-des">Map</div>
+                <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+            </a>
+        </li>
+        <li><a style="font-size: 13px;color: #333333;" href="/other/index">
+                <div>
+                    <i class="icon anticon icon-smileo"></i>
+                </div>
+                <div>开发2</div>
+                <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+            </a>
         </li>
         <li>
-            <div><a style="font-size: 13px;color: #333333;" href="/other/index">开发2</a></div>
-            <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+            <a style="font-size: 13px;color: #333333;" href="">
+                <div>
+                    <i class="icon anticon icon-smileo"></i>
+                </div>
+                <div>开发3</div>
+                <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+            </a>
         </li>
         <li>
-            <div><a style="font-size: 13px;color: #333333;" href="">开发3</a></div>
-            <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+            <a style="font-size: 13px;color: #333333;" href="">
+                <div>
+                    <i class="icon anticon icon-smileo"></i>
+                </div>
+                <div>开发4</div>
+                <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
+            </a>
         </li>
         <li>
-            <div><a style="font-size: 13px;color: #333333;" href="">开发4</a></div>
-            <div style="position: absolute;right: 1px;top: 14px;"><img src="/images/firstnav_line.png"></div>
-        </li>
-        <li>
-            <div><a style="font-size: 13px;color: #333333;" href="">开发5</a></div>
+            <a style="font-size: 13px;color: #333333;" href="">
+                <div>
+                    <i class="icon anticon icon-smileo"></i>
+                </div>
+                <div>开发5</div>
+            </a>
         </li>
     </ul>
 </div>

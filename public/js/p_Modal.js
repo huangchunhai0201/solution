@@ -45,8 +45,6 @@
             this._jWrap.append(this._jControl);
 
             var defaultPro = {
-                'width': '70%',
-                'height': '60vh'
             };
             if (this._info.style) {
                 $.extend(defaultPro, this._info.style);
@@ -58,7 +56,7 @@
             });
         },
         open: function () {
-            this._jControl.show();
+            this._jControl.slideDown("fast");
         }
     };
 })();

@@ -2,16 +2,13 @@
 <div class="main">
     <div class="menu"></div>
     <div class="content">
-        <div class="content-title">首页</div>
-        <div class="content-area" id="content-area">
-
-        </div>
+        <div class="content-title">map</div>
     </div>
 </div>
 <script>
-    (function () {
+    (function() {
         var p_menu = new Pithy.p_Menu({
-            menu: [
+            menu : [
                 {
                     title: '地图1',
                     icon: 'icon-enviromento',
@@ -24,11 +21,6 @@
                 }]
         });
         p_menu.build('.menu');
-
-        //地图加载
-        var map = new Pithy.p_Map();
-        map.init('content-area');
-
     })();
 </script>
 </body>
