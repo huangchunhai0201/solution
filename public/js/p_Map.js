@@ -14,10 +14,13 @@
         init: function(jDivId) {
             this._map = new AMap.Map(jDivId, {
                 resizeEnable: true,
-                zoom:11,
-                center: [116.397428, 39.90923]
-
+                zoom:11
+                // center: [116.397428, 39.90923]
             });
+            if (!this._info.cityName) {
+                this._info.cityName = '南京';
+            }
+            this._map.setCity(this._info.cityName);
         }
     };
 })();

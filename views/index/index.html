@@ -3,6 +3,14 @@
     <div class="menu"></div>
     <div class="content">
         <div class="content-title">首页</div>
+        <div id="panel" style=" position: absolute;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            z-index: 9999;
+            top: 178px;
+            right: 10px;
+            width: 280px;"></div>
         <div class="content-area" id="content-area">
 
         </div>
@@ -26,9 +34,24 @@
         p_menu.build('.menu');
 
         //地图加载
-        var map = new Pithy.p_Map();
-        map.init('content-area');
+        var p_map = new Pithy.p_Map({});
+        p_map.init('content-area');
 
+        var map = p_map.getMap();
+
+        AMap.service(["AMap.PlaceSearch"], function() {
+            var placeSearch = new AMap.PlaceSearch({ //构造地点查询类
+                city: "025", //城市 南京 （百度高德城市编码）
+                citylimit: true,
+                type: '餐饮',
+                pageSize: 50,
+                pageIndex: 1,
+                map: map,
+                panel: "panel"
+            });
+            //关键字查询
+            placeSearch.search('绝味鸭脖');
+        });
     })();
 </script>
 </body>
