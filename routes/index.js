@@ -84,5 +84,24 @@ router.get('/other/index', function(req, res, next) {
   res.render('other/index', data);
 });
 
+router.get('/component/index', function(req, res, next) {
+  //数据
+  var data = {
+    title: '组件开发',
+    time: (new Date).toString(),
+    list: [
+      {
+        id: '1',
+        name: '张三'
+      },
+      {
+        id: '2',
+        name: '李四'
+      }
+    ]
+  };
+  //渲染模板
+  res.render('component/index', data);
+});
 
 module.exports = router;

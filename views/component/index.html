@@ -1,0 +1,38 @@
+<%include ../common/header.ejs %>
+<div class="main">
+    <div class="menu"></div>
+    <div class="content">
+        <div class="content-title">首页</div>
+        <div id="panel" style=" position: absolute;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            z-index: 9999;
+            top: 178px;
+            right: 10px;
+            width: 280px;"></div>
+        <div class="content-area" id="content-area">
+
+        </div>
+    </div>
+</div>
+<script>
+    (function () {
+        var p_menu = new Pithy.p_Menu({
+            menu: [
+                {
+                    title: '地图1',
+                    icon: 'icon-enviromento',
+                    href: '/index/map'
+                },
+                {
+                    title: '地图2',
+                    icon: 'icon-hearto',
+                    href: ''
+                }]
+        });
+        p_menu.build('.menu');
+    })();
+</script>
+</body>
+<%include ../common/footer.ejs %>
